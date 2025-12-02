@@ -66,7 +66,7 @@ $(document).ready(function() {
             if (account.role === 'admin') {
                 window.location.href = 'Admin.html';
             } else {
-                window.location.href = 'Home.html';
+                window.location.href = 'index.html';
             }
         } else {
             // Hiển thị thông báo lỗi
