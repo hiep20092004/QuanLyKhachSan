@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Rooms - Luxury Hotel</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="../Styles/styles.css">
+    <link rel="stylesheet" href="../Styles/rooms.css">
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <!-- AOS Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header -->
+    <div id="header"></div>
+
+    <main>
+        <section class="rooms-hero">
+            <div class="swiper hero-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="hero-slide" style="background-image: url('../Images/suinen4.webp');">
+                            <div class="hero-content">
+                                <h1>PHÒNG NGHỈ CAO CẤP</h1>
+                                <p>Trải nghiệm sự thoải mái tuyệt đỉnh trong không gian rộng rãi và sang trọng</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="hero-slide" style="background-image: url('../Images/suinen3.webp');">
+                            <div class="hero-content">
+                                <h1>PHÒNG SUITE SANG TRỌNG</h1>
+                                <p>Đắm mình trong không gian đẳng cấp của bộ sưu tập phòng suite cao cấp</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="hero-slide" style="background-image: url('../Images/sui3.jpg');">
+                            <div class="hero-content">
+                                <h1>PHÒNG GIA ĐÌNH</h1>
+                                <p>Không gian hoàn hảo cho những khoảnh khắc gia đình đáng nhớ</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </section>
+
+        <section class="rooms-grid">
+            <div class="container">
+                <div class="rooms-container">
+                    <!-- Deluxe Room -->
+                    <div class="room-card" data-aos="fade-up">
+                        <div class="room-image">
+                            <div class="swiper room-swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="../Images/suinen4.webp" alt="Presidential Suite">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="../Images/sui3.jpg" alt="Presidential Suite">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="../Images/sui2.jpg" alt="Presidential Suite">
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+                        <div class="room-content">
+                            <h2>DELUXE</h2>
+                            <p>Phòng Deluxe rộng 40 mét vuông và có nội thất trang nhã, rộng rãi với thiết kế hiện đại,
+                                một...</p>
+                            <div class="room-details">
+                                <div class="detail-item">
+                                    <span class="label">Bed</span>
+                                    <span class="value">King/Twin</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Room size</span>
+                                    <span class="value">40sqm</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Occupancy</span>
+                                    <span class="value">2</span>
+                                </div>
+                            </div>
+                            <div class="room-actions">
+                                <a href="../View/Booking.html" class="btn-book">
+                                    <span>Đặt phòng</span>
+                                    <i class="fas fa-chevron-right"></i>
+                                </a>
+                                <a href="../View/room-detail.html" class="btn-more">Xem thêm</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Deluxe Premium -->
+                    <div class="room-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="room-image">
+                            <div class="swiper room-swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="../Images/suinen4.webp" alt="Presidential Suite">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="../Images/sui3.jpg" alt="Presidential Suite">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="../Images/sui2.jpg" alt="Presidential Suite">
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+                        <div class="room-content">
+                            <h2>DELUXE PREMIUM</h2>
+                            <p>Phòng Deluxe Premium rộng 40 mét vuông và có nội thất trang nhã, rộng rãi với thiết kế
+                                hiện...</p>
+                            <div class="room-details">
+                                <div class="detail-item">
+                                    <span class="label">Bed</span>
+                                    <span class="value">King bed</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Room size</span>
+                                    <span class="value">40sqm</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Occupancy</span>
+                                    <span class="value">2</span>
+                                </div>
+                            </div>
+                            <div class="room-actions">
+                                <a href="../View/Booking.html" class="btn-book">
+                                    <span>Đặt phòng</span>
+                                    <i class="fas fa-chevron-right"></i>
+                                </a>
+                                <a href="../View/room-detail.html" class="btn-more">Xem thêm</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Suite Room -->
+                    <div class="room-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="room-image">
+                            <div class="swiper room-swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="../Images/suinen4.webp" alt="Presidential Suite">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="../Images/sui3.jpg" alt="Presidential Suite">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="../Images/sui2.jpg" alt="Presidential Suite">
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+                        <div class="room-content">
+                            <h2>SUITE</h2>
+                            <p>Phòng Suite sang trọng rộng 60 mét vuông với không gian phòng khách riêng biệt, view
+                                thành phố...</p>
+                            <div class="room-details">
+                                <div class="detail-item">
+                                    <span class="label">Bed</span>
+                                    <span class="value">King bed</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Room size</span>
+                                    <span class="value">60sqm</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Occupancy</span>
+                                    <span class="value">3</span>
+                                </div>
+                            </div>
+                            <div class="room-actions">
+                                <a href="../View/Booking.html" class="btn-book">
+                                    <span>Đặt phòng</span>
+                                    <i class="fas fa-chevron-right"></i>
+                                </a>
+                                <a href="../View/room-detail.html" class="btn-more">Xem thêm</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Presidential Suite -->
+                    <div class="room-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="room-image">
+                            <div class="swiper room-swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="../Images/suinen4.webp" alt="Presidential Suite">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="../Images/sui3.jpg" alt="Presidential Suite">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="../Images/sui2.jpg" alt="Presidential Suite">
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+                        <div class="room-content">
+                            <h2>PRESIDENTIAL SUITE</h2>
+                            <p>Phòng Presidential Suite đẳng cấp rộng 120 mét vuông với thiết kế sang trọng, view toàn
+                                cảnh...</p>
+                            <div class="room-details">
+                                <div class="detail-item">
+                                    <span class="label">Bed</span>
+                                    <span class="value">King bed</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Room size</span>
+                                    <span class="value">120sqm</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Occupancy</span>
+                                    <span class="value">4</span>
+                                </div>
+                            </div>
+                            <div class="room-actions">
+                                <a href="../View/Booking.html" class="btn-book">
+                                    <span>Đặt phòng</span>
+                                    <i class="fas fa-chevron-right"></i>
+                                </a>
+                                <a href="../View/room-detail.html" class="btn-more">Xem thêm</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Executive Suite -->
+                    <div class="room-card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="room-image">
+                            <div class="swiper room-swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="../Images/suinen4.webp" alt="Presidential Suite">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="../Images/sui3.jpg" alt="Presidential Suite">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="../Images/sui2.jpg" alt="Presidential Suite">
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+                        <div class="room-content">
+                            <h2>EXECUTIVE SUITE</h2>
+                            <p>Phòng Executive Suite sang trọng rộng 80 mét vuông với tầm nhìn panorama, phòng khách
+                                riêng và phòng làm việc...</p>
+                            <div class="room-details">
+                                <div class="detail-item">
+                                    <span class="label">Bed</span>
+                                    <span class="value">King bed</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Room size</span>
+                                    <span class="value">80sqm</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Occupancy</span>
+                                    <span class="value">2-3</span>
+                                </div>
+                            </div>
+                            <div class="room-actions">
+                                <a href="../View/Booking.html" class="btn-book">
+                                    <span>Đặt phòng</span>
+                                    <i class="fas fa-chevron-right"></i>
+                                </a>
+                                <a href="../View/room-detail.html" class="btn-more">Xem thêm</a>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="room-card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="room-image">
+                            <div class="swiper room-swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="../Images/suinen4.webp" alt="Presidential Suite">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="../Images/sui3.jpg" alt="Presidential Suite">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="../Images/sui2.jpg" alt="Presidential Suite">
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+                        <div class="room-content">
+                            <h2>EXECUTIVE SUITE</h2>
+                            <p>Phòng Executive Suite sang trọng rộng 80 mét vuông với tầm nhìn panorama, phòng khách
+                                riêng và phòng làm việc...</p>
+                            <div class="room-details">
+                                <div class="detail-item">
+                                    <span class="label">Bed</span>
+                                    <span class="value">King bed</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Room size</span>
+                                    <span class="value">80sqm</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Occupancy</span>
+                                    <span class="value">2-3</span>
+                                </div>
+                            </div>
+                            <div class="room-actions">
+                                <a href="../View/Booking.html" class="btn-book">
+                                    <span>Đặt phòng</span>
+                                    <i class="fas fa-chevron-right"></i>
+                                </a>
+                                <a href="../View/room-detail.html" class="btn-more">Xem thêm</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                     <div class="room-card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="room-image">
+                            <div class="swiper room-swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="../Images/suinen4.webp" alt="Presidential Suite">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="../Images/sui3.jpg" alt="Presidential Suite">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="../Images/sui2.jpg" alt="Presidential Suite">
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+                        <div class="room-content">
+                            <h2>EXECUTIVE SUITE</h2>
+                            <p>Phòng Executive Suite sang trọng rộng 80 mét vuông với tầm nhìn panorama, phòng khách
+                                riêng và phòng làm việc...</p>
+                            <div class="room-details">
+                                <div class="detail-item">
+                                    <span class="label">Bed</span>
+                                    <span class="value">King bed</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Room size</span>
+                                    <span class="value">80sqm</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Occupancy</span>
+                                    <span class="value">2-3</span>
+                                </div>
+                            </div>
+                            <div class="room-actions">
+                                <a href="../View/Booking.html" class="btn-book">
+                                    <span>Đặt phòng</span>
+                                    <i class="fas fa-chevron-right"></i>
+                                </a>
+                                <a href="../View/room-detail.html" class="btn-more">Xem thêm</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                     <div class="room-card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="room-image">
+                            <div class="swiper room-swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="../Images/suinen4.webp" alt="Presidential Suite">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="../Images/sui3.jpg" alt="Presidential Suite">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="../Images/sui2.jpg" alt="Presidential Suite">
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+                        <div class="room-content">
+                            <h2>EXECUTIVE SUITE</h2>
+                            <p>Phòng Executive Suite sang trọng rộng 80 mét vuông với tầm nhìn panorama, phòng khách
+                                riêng và phòng làm việc...</p>
+                            <div class="room-details">
+                                <div class="detail-item">
+                                    <span class="label">Bed</span>
+                                    <span class="value">King bed</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Room size</span>
+                                    <span class="value">80sqm</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Occupancy</span>
+                                    <span class="value">2-3</span>
+                                </div>
+                            </div>
+                            <div class="room-actions">
+                                <a href="../View/Booking.html" class="btn-book">
+                                    <span>Đặt phòng</span>
+                                    <i class="fas fa-chevron-right"></i>
+                                </a>
+                                <a href="../View/room-detail.html" class="btn-more">Xem thêm</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                     <div class="room-card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="room-image">
+                            <div class="swiper room-swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="../Images/suinen4.webp" alt="Presidential Suite">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="../Images/sui3.jpg" alt="Presidential Suite">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="../Images/sui2.jpg" alt="Presidential Suite">
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+                        <div class="room-content">
+                            <h2>EXECUTIVE SUITE</h2>
+                            <p>Phòng Executive Suite sang trọng rộng 80 mét vuông với tầm nhìn panorama, phòng khách
+                                riêng và phòng làm việc...</p>
+                            <div class="room-details">
+                                <div class="detail-item">
+                                    <span class="label">Bed</span>
+                                    <span class="value">King bed</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Room size</span>
+                                    <span class="value">80sqm</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Occupancy</span>
+                                    <span class="value">2-3</span>
+                                </div>
+                            </div>
+                            <div class="room-actions">
+                                <a href="../View/Booking.html" class="btn-book">
+                                    <span>Đặt phòng</span>
+                                    <i class="fas fa-chevron-right"></i>
+                                </a>
+                                <a href="../View/room-detail.html" class="btn-more">Xem thêm</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                     <div class="room-card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="room-image">
+                            <div class="swiper room-swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="../Images/suinen4.webp" alt="Presidential Suite">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="../Images/sui3.jpg" alt="Presidential Suite">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="../Images/sui2.jpg" alt="Presidential Suite">
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+                        <div class="room-content">
+                            <h2>EXECUTIVE SUITE</h2>
+                            <p>Phòng Executive Suite sang trọng rộng 80 mét vuông với tầm nhìn panorama, phòng khách
+                                riêng và phòng làm việc...</p>
+                            <div class="room-details">
+                                <div class="detail-item">
+                                    <span class="label">Bed</span>
+                                    <span class="value">King bed</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Room size</span>
+                                    <span class="value">80sqm</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Occupancy</span>
+                                    <span class="value">2-3</span>
+                                </div>
+                            </div>
+                            <div class="room-actions">
+                                <a href="../View/Booking.html" class="btn-book">
+                                    <span>Đặt phòng</span>
+                                    <i class="fas fa-chevron-right"></i>
+                                </a>
+                                <a href="../View/room-detail.html" class="btn-more">Xem thêm</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                     <div class="room-card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="room-image">
+                            <div class="swiper room-swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="../Images/suinen4.webp" alt="Presidential Suite">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="../Images/sui3.jpg" alt="Presidential Suite">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="../Images/sui2.jpg" alt="Presidential Suite">
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+                        <div class="room-content">
+                            <h2>EXECUTIVE SUITE</h2>
+                            <p>Phòng Executive Suite sang trọng rộng 80 mét vuông với tầm nhìn panorama, phòng khách
+                                riêng và phòng làm việc...</p>
+                            <div class="room-details">
+                                <div class="detail-item">
+                                    <span class="label">Bed</span>
+                                    <span class="value">King bed</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Room size</span>
+                                    <span class="value">80sqm</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Occupancy</span>
+                                    <span class="value">2-3</span>
+                                </div>
+                            </div>
+                            <div class="room-actions">
+                                <a href="../View/Booking.html" class="btn-book">
+                                    <span>Đặt phòng</span>
+                                    <i class="fas fa-chevron-right"></i>
+                                </a>
+                                <a href="../View/room-detail.html" class="btn-more">Xem thêm</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                    <!-- Family Room -->
+                    <div class="room-card" data-aos="fade-up" data-aos-delay="500">
+                        <div class="room-image">
+                            <div class="swiper room-swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="../Images/suinen4.webp" alt="Presidential Suite">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="../Images/sui3.jpg" alt="Presidential Suite">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="../Images/sui2.jpg" alt="Presidential Suite">
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+                        <div class="room-content">
+                            <h2>FAMILY ROOM</h2>
+                            <p>Phòng Family Room rộng rãi 70 mét vuông với 2 phòng ngủ riêng biệt, lý tưởng cho gia đình
+                                có trẻ em...</p>
+                            <div class="room-details">
+                                <div class="detail-item">
+                                    <span class="label">Bed</span>
+                                    <span class="value">1 King + 2 Single</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Room size</span>
+                                    <span class="value">70sqm</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Occupancy</span>
+                                    <span class="value">4-5</span>
+                                </div>
+                            </div>
+                            <div class="room-actions">
+                                <a href="../View/Booking.html" class="btn-book">
+                                    <span>Đặt phòng</span>
+                                    <i class="fas fa-chevron-right"></i>
+                                </a>
+                                <a href="../View/room-detail.html" class="btn-more">Xem thêm</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Component loader -->
+    <script src="../Script/include.js"></script>
+    <!-- Main script -->
+    <script src="../Script/script.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-out',
+            once: true,
+            offset: 50
+        });
+
+        // Initialize Hero Swiper
+        new Swiper('.hero-swiper', {
+            loop: true,
+            speed: 1000,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev'
+            },
+            effect: 'fade',
+            fadeEffect: {
+                crossFade: true
+            }
+        });
+
+        // Initialize room image sliders
+        const roomSwipers = document.querySelectorAll('.room-swiper');
+        roomSwipers.forEach(slider => {
+            new Swiper(slider, {
+                loop: true,
+                speed: 800,
+                grabCursor: true,
+                effect: 'slide',
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true
+                },
+                autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: false
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

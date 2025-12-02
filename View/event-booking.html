@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đặt Phòng Họp & Sự Kiện - Hotel Nikko Saigon</title>
+    <!-- Thư viện Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- File CSS -->
+    <link rel="stylesheet" href="../Styles/styles.css">
+    <link rel="stylesheet" href="../Styles/event-booking.css">
+    <link rel="stylesheet" href="../Styles/header.css">
+    <!-- Thư viện jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <!-- Header -->
+    <div id="header"></div>
+
+    <div class="event-booking-container">
+        <!-- Banner section -->
+        <div class="event-banner">
+            <h1>Phòng Họp & Sự Kiện</h1>
+            <p>Không gian chuyên nghiệp cho mọi dịp quan trọng</p>
+        </div>
+
+        <!-- Room types section -->
+        <div class="room-types-section">
+            <h2>Các Loại Phòng</h2>
+            <div class="room-grid">
+                <div class="room-card" data-aos="fade-up">
+                    <img src="../Images/meeting-room-1.jpg" alt="Phòng họp nhỏ">
+                    <div class="room-info">
+                        <h3>Phòng Họp Nhỏ</h3>
+                        <ul>
+                            <li><i class="fas fa-users"></i> 10-20 người</li>
+                            <li><i class="fas fa-vector-square"></i> 40m²</li>
+                            <li><i class="fas fa-clock"></i> Tối thiểu 2 giờ</li>
+                        </ul>
+                        <p class="price">Từ 2,000,000 VNĐ/giờ</p>
+                    </div>
+                </div>
+
+                <div class="room-card" data-aos="fade-up" data-aos-delay="100">
+                    <img src="../Images/meeting-room-2.jpg" alt="Phòng họp vừa">
+                    <div class="room-info">
+                        <h3>Phòng Họp Vừa</h3>
+                        <ul>
+                            <li><i class="fas fa-users"></i> 20-50 người</li>
+                            <li><i class="fas fa-vector-square"></i> 100m²</li>
+                            <li><i class="fas fa-clock"></i> Tối thiểu 4 giờ</li>
+                        </ul>
+                        <p class="price">Từ 4,000,000 VNĐ/giờ</p>
+                    </div>
+                </div>
+
+                <div class="room-card" data-aos="fade-up" data-aos-delay="200">
+                    <img src="../Images/meeting-room-3.jpg" alt="Phòng hội nghị">
+                    <div class="room-info">
+                        <h3>Phòng Hội Nghị</h3>
+                        <ul>
+                            <li><i class="fas fa-users"></i> 50-200 người</li>
+                            <li><i class="fas fa-vector-square"></i> 300m²</li>
+                            <li><i class="fas fa-clock"></i> Tối thiểu 4 giờ</li>
+                        </ul>
+                        <p class="price">Từ 10,000,000 VNĐ/giờ</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Booking form section -->
+        <div class="booking-section">
+            <div class="booking-content">
+                <div class="booking-form-container" data-aos="fade-right">
+                    <h2>Đặt Phòng</h2>
+                    <form id="eventBookingForm" class="booking-form">
+                        <div class="form-group">
+                            <label for="eventType">Loại sự kiện</label>
+                            <select id="eventType" name="eventType" required>
+                                <option value="">Chọn loại sự kiện</option>
+                                <option value="meeting">Họp công ty</option>
+                                <option value="conference">Hội nghị</option>
+                                <option value="seminar">Hội thảo</option>
+                                <option value="training">Đào tạo</option>
+                                <option value="other">Khác</option>
+                            </select>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="date">Ngày</label>
+                                <input type="date" id="date" name="date" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="time">Giờ bắt đầu</label>
+                                <input type="time" id="time" name="time" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="duration">Thời lượng (giờ)</label>
+                                <input type="number" id="duration" name="duration" min="2" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="attendees">Số người tham dự</label>
+                                <input type="number" id="attendees" name="attendees" min="1" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="roomType">Loại phòng</label>
+                            <select id="roomType" name="roomType" required>
+                                <option value="">Chọn loại phòng</option>
+                                <option value="small">Phòng họp nhỏ (10-20 người)</option>
+                                <option value="medium">Phòng họp vừa (20-50 người)</option>
+                                <option value="large">Phòng hội nghị (50-200 người)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Dịch vụ bổ sung</label>
+                            <div class="checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="services" value="catering">
+                                    Dịch vụ ăn uống
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="services" value="equipment">
+                                    Thiết bị hội nghị
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="services" value="decoration">
+                                    Trang trí
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="name">Họ và tên người đặt</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">Số điện thoại</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="notes">Ghi chú thêm</label>
+                            <textarea id="notes" name="notes" rows="4" placeholder="Yêu cầu đặc biệt về setup phòng, thiết bị..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-submit">Gửi Yêu Cầu Đặt Phòng</button>
+                    </form>
+                </div>
+
+                <div class="booking-info" data-aos="fade-left">
+                    <div class="info-card">
+                        <h3><i class="fas fa-star"></i> Tiện Nghi</h3>
+                        <ul>
+                            <li>Máy chiếu và màn hình LCD</li>
+                            <li>Hệ thống âm thanh chuyên nghiệp</li>
+                            <li>Wifi tốc độ cao</li>
+                            <li>Điều hòa nhiệt độ</li>
+                            <li>Bàn ghế linh hoạt</li>
+                            <li>Ánh sáng điều chỉnh được</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <h3><i class="fas fa-concierge-bell"></i> Dịch Vụ Đi Kèm</h3>
+                        <ul>
+                            <li>Coffee break</li>
+                            <li>Ăn trưa/tối theo thực đơn</li>
+                            <li>Hỗ trợ kỹ thuật</li>
+                            <li>Lễ tân chuyên nghiệp</li>
+                            <li>Bãi đậu xe</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <h3><i class="fas fa-phone"></i> Liên Hệ</h3>
+                        <ul>
+                            <li>Điện thoại: (+84) 28 1234 5678</li>
+                            <li>Email: events@hotelnikko.com</li>
+                            <li>Thời gian: 8:00 - 20:00 (Thứ 2 - Chủ nhật)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Tải các thành phần -->
+    <script src="../Script/include.js"></script>
+    <!-- Script chính -->
+    <script src="../Script/script.js"></script>
+    <!-- Script xử lý đặt phòng sự kiện -->
+    <script src="../Script/event-booking.js"></script>
+</body>
+
+</html> 

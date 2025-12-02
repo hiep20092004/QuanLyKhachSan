@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản Lý Dịch Vụ - Hotel Nikko Saigon</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Styles/admin.css">
+    <link rel="stylesheet" href="../Styles/service-management.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <div class="admin-container">
+        <!-- Admin Sidebar -->
+        <div id="admin-sidebar"></div>
+
+        <div class="main-content">
+            <!-- Admin Header -->
+            <div id="admin-header"></div>
+
+            <!-- Main Content -->
+            <div class="content-wrapper">
+                <div class="page-header">
+                    <h1 style="margin-bottom: 20px;">Quản Lý Dịch Vụ</h1>
+                    <button class="btn btn-primary">
+                        <i class="fas fa-plus"></i> Thêm Dịch Vụ
+                    </button>
+                </div>
+
+                <div class="service-stats">
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background-color: #4CAF50;">
+                            <i class="fas fa-concierge-bell"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Tổng Dịch Vụ</h3>
+                            <p class="stat-number">25</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background-color: #2196F3;">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Đang Hoạt Động</h3>
+                            <p class="stat-number">20</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background-color: #FF9800;">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Đặt Hôm Nay</h3>
+                            <p class="stat-number">15</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background-color: #9C27B0;">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Doanh Thu Tháng</h3>
+                            <p class="stat-number">45.5M</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-categories">
+                    <button class="category-btn active">Tất Cả</button>
+                    <button class="category-btn">Nhà Hàng</button>
+                    <button class="category-btn">Spa & Massage</button>
+                    <button class="category-btn">Giặt Ủi</button>
+                    <button class="category-btn">Phòng Họp</button>
+                    <button class="category-btn">Đưa Đón</button>
+                </div>
+
+                <div class="service-grid">
+                    <!-- Dịch vụ nhà hàng -->
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="../Images/restaurant.jpg" alt="Nhà hàng">
+                            <span class="service-status active">Đang hoạt động</span>
+                        </div>
+                        <div class="service-info">
+                            <h3>Nhà Hàng Nikko</h3>
+                            <p class="service-description">Ẩm thực Á - Âu với không gian sang trọng</p>
+                            <div class="service-meta">
+                                <span><i class="fas fa-clock"></i> 6:00 - 22:00</span>
+                                <span><i class="fas fa-user-friends"></i> 120 chỗ</span>
+                            </div>
+                            <div class="service-price">
+                                <span>Từ</span>
+                                <p>250,000 ₫</p>
+                            </div>
+                            <div class="service-actions">
+                                <button class="btn-icon" title="Chỉnh sửa">
+                                    <i class="fas fa-edit"></i>
+                                </button>
+                                <button class="btn-icon" title="Xóa">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                                <button class="btn-icon" title="Chi tiết">
+                                    <i class="fas fa-info-circle"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Dịch vụ spa -->
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="../Images/spa.jpg" alt="Spa">
+                            <span class="service-status active">Đang hoạt động</span>
+                        </div>
+                        <div class="service-info">
+                            <h3>Nikko Spa</h3>
+                            <p class="service-description">Thư giãn với liệu pháp massage cao cấp</p>
+                            <div class="service-meta">
+                                <span><i class="fas fa-clock"></i> 9:00 - 21:00</span>
+                                <span><i class="fas fa-bed"></i> 8 phòng</span>
+                            </div>
+                            <div class="service-price">
+                                <span>Từ</span>
+                                <p>500,000 ₫</p>
+                            </div>
+                            <div class="service-actions">
+                                <button class="btn-icon" title="Chỉnh sửa">
+                                    <i class="fas fa-edit"></i>
+                                </button>
+                                <button class="btn-icon" title="Xóa">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                                <button class="btn-icon" title="Chi tiết">
+                                    <i class="fas fa-info-circle"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Dịch vụ giặt ủi -->
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="../Images/laundry.jpg" alt="Giặt ủi">
+                            <span class="service-status active">Đang hoạt động</span>
+                        </div>
+                        <div class="service-info">
+                            <h3>Dịch Vụ Giặt Ủi</h3>
+                            <p class="service-description">Giặt ủi cao cấp, giao nhận tận phòng</p>
+                            <div class="service-meta">
+                                <span><i class="fas fa-clock"></i> 7:00 - 20:00</span>
+                                <span><i class="fas fa-tshirt"></i> Express 4h</span>
+                            </div>
+                            <div class="service-price">
+                                <span>Từ</span>
+                                <p>50,000 ₫</p>
+                            </div>
+                            <div class="service-actions">
+                                <button class="btn-icon" title="Chỉnh sửa">
+                                    <i class="fas fa-edit"></i>
+                                </button>
+                                <button class="btn-icon" title="Xóa">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                                <button class="btn-icon" title="Chi tiết">
+                                    <i class="fas fa-info-circle"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Dịch vụ phòng họp -->
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="../Images/meeting-room.jpg" alt="Phòng họp">
+                            <span class="service-status maintenance">Bảo trì</span>
+                        </div>
+                        <div class="service-info">
+                            <h3>Phòng Họp Diamond</h3>
+                            <p class="service-description">Phòng họp hiện đại với trang thiết bị cao cấp</p>
+                            <div class="service-meta">
+                                <span><i class="fas fa-clock"></i> 7:00 - 22:00</span>
+                                <span><i class="fas fa-users"></i> 30 người</span>
+                            </div>
+                            <div class="service-price">
+                                <span>Từ</span>
+                                <p>2,000,000 ₫</p>
+                            </div>
+                            <div class="service-actions">
+                                <button class="btn-icon" title="Chỉnh sửa">
+                                    <i class="fas fa-edit"></i>
+                                </button>
+                                <button class="btn-icon" title="Xóa">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                                <button class="btn-icon" title="Chi tiết">
+                                    <i class="fas fa-info-circle"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pagination">
+                    <button class="btn-page"><i class="fas fa-chevron-left"></i></button>
+                    <button class="btn-page active">1</button>
+                    <button class="btn-page">2</button>
+                    <button class="btn-page">3</button>
+                    <button class="btn-page"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../Script/admin-components.js"></script>
+    <script src="../Script/admin.js"></script>
+    <script src="../Script/service-management.js"></script>
+</body>
+
+</html> 

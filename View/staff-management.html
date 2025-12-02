@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản Lý Nhân Viên - Hotel Nikko Saigon</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Styles/admin.css">
+    <link rel="stylesheet" href="../Styles/staff-management.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <div class="admin-container">
+        <!-- Admin Sidebar -->
+        <div id="admin-sidebar"></div>
+
+        <div class="main-content">
+            <!-- Admin Header -->
+            <div id="admin-header"></div>
+
+            <!-- Main Content -->
+            <div class="content-wrapper">
+                <div class="page-header">
+                    <h1 style="margin-bottom: 20px;">Quản Lý Nhân Viên</h1>
+                    <button class="btn btn-primary">
+                        <i class="fas fa-plus"></i> Thêm Nhân Viên
+                    </button>
+                </div>
+
+                <div class="staff-stats">
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background-color: #4CAF50;">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Tổng Nhân Viên</h3>
+                            <p class="stat-number">120</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background-color: #2196F3;">
+                            <i class="fas fa-user-check"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Đang Làm Việc</h3>
+                            <p class="stat-number">98</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background-color: #FF9800;">
+                            <i class="fas fa-user-clock"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Nghỉ Phép</h3>
+                            <p class="stat-number">15</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background-color: #9C27B0;">
+                            <i class="fas fa-user-plus"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Tuyển Mới (Tháng)</h3>
+                            <p class="stat-number">7</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="filters">
+                    <div class="filter-group">
+                        <select class="form-control">
+                            <option value="">Tất Cả Bộ Phận</option>
+                            <option value="reception">Lễ Tân</option>
+                            <option value="housekeeping">Buồng Phòng</option>
+                            <option value="restaurant">Nhà Hàng</option>
+                            <option value="security">Bảo Vệ</option>
+                            <option value="technical">Kỹ Thuật</option>
+                        </select>
+                        <select class="form-control">
+                            <option value="">Tất Cả Trạng Thái</option>
+                            <option value="working">Đang Làm Việc</option>
+                            <option value="leave">Nghỉ Phép</option>
+                            <option value="resigned">Đã Nghỉ Việc</option>
+                        </select>
+                    </div>
+                    <div class="search-filter">
+                        <input type="text" class="form-control" placeholder="Tìm kiếm nhân viên...">
+                        <i class="fas fa-search"></i>
+                    </div>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Mã NV</th>
+                                <th>Họ Tên</th>
+                                <th>Bộ Phận</th>
+                                <th>Số Điện Thoại</th>
+                                <th>Email</th>
+                                <th>Ngày Vào Làm</th>
+                                <th>Trạng Thái</th>
+                                <th>Thao Tác</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>NV001</td>
+                                <td>
+                                    <div class="staff-info">
+                                        <img src="../Images/staff-avatar.jpg" alt="Nguyễn Văn A">
+                                        <span>Nguyễn Văn A</span>
+                                    </div>
+                                </td>
+                                <td>Lễ Tân</td>
+                                <td>0912345678</td>
+                                <td>nguyenvana@hotel.com</td>
+                                <td>01/01/2023</td>
+                                <td><span class="status-badge working">Đang làm việc</span></td>
+                                <td class="actions">
+                                    <button class="btn-icon" title="Chỉnh sửa">
+                                        <i class="fas fa-edit"></i>
+                                    </button>
+                                    <button class="btn-icon" title="Xóa">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                    <button class="btn-icon" title="Chi tiết">
+                                        <i class="fas fa-info-circle"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>NV002</td>
+                                <td>
+                                    <div class="staff-info">
+                                        <img src="../Images/staff-avatar.jpg" alt="Trần Thị B">
+                                        <span>Trần Thị B</span>
+                                    </div>
+                                </td>
+                                <td>Buồng Phòng</td>
+                                <td>0923456789</td>
+                                <td>tranthib@hotel.com</td>
+                                <td>15/02/2023</td>
+                                <td><span class="status-badge leave">Nghỉ phép</span></td>
+                                <td class="actions">
+                                    <button class="btn-icon" title="Chỉnh sửa">
+                                        <i class="fas fa-edit"></i>
+                                    </button>
+                                    <button class="btn-icon" title="Xóa">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                    <button class="btn-icon" title="Chi tiết">
+                                        <i class="fas fa-info-circle"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>NV003</td>
+                                <td>
+                                    <div class="staff-info">
+                                        <img src="../Images/staff-avatar.jpg" alt="Lê Văn C">
+                                        <span>Lê Văn C</span>
+                                    </div>
+                                </td>
+                                <td>Nhà Hàng</td>
+                                <td>0934567890</td>
+                                <td>levanc@hotel.com</td>
+                                <td>10/03/2023</td>
+                                <td><span class="status-badge working">Đang làm việc</span></td>
+                                <td class="actions">
+                                    <button class="btn-icon" title="Chỉnh sửa">
+                                        <i class="fas fa-edit"></i>
+                                    </button>
+                                    <button class="btn-icon" title="Xóa">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                    <button class="btn-icon" title="Chi tiết">
+                                        <i class="fas fa-info-circle"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="pagination">
+                    <button class="btn-page"><i class="fas fa-chevron-left"></i></button>
+                    <button class="btn-page active">1</button>
+                    <button class="btn-page">2</button>
+                    <button class="btn-page">3</button>
+                    <button class="btn-page"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../Script/admin-components.js"></script>
+    <script src="../Script/admin.js"></script>
+    <script src="../Script/staff-management.js"></script>
+</body>
+
+</html> 

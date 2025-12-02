@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông Tin Cá Nhân - Hotel Management</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Styles/admin.css">
+    <link rel="stylesheet" href="../Styles/profile.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <div class="admin-container">
+        <!-- Admin Sidebar -->
+        <div id="admin-sidebar"></div>
+
+        <div class="main-content">
+            <!-- Admin Header -->
+            <div id="admin-header"></div>
+
+            <!-- Main Content -->
+            <div class="content-wrapper">
+                <div class="profile-container">
+                    <!-- Profile Header -->
+                    <div class="profile-header">
+                        <div class="profile-cover">
+                            <img src="../Images/cover-default.jpg" alt="Cover Image">
+                            <button class="btn-change-cover">
+                                <i class="fas fa-camera"></i> Thay đổi ảnh bìa
+                            </button>
+                        </div>
+                        <div class="profile-avatar">
+                            <div class="avatar-wrapper">
+                                <img src="../Images/avatar-default.jpg" alt="User Avatar">
+                                <button class="btn-change-avatar">
+                                    <i class="fas fa-camera"></i>
+                                </button>
+                            </div>
+                            <div class="profile-info">
+                                <h1>Nguyễn Văn A</h1>
+                                <p>Quản trị viên</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Profile Content -->
+                    <div class="profile-content">
+                        <div class="profile-nav">
+                            <button class="nav-btn active" data-tab="info">
+                                <i class="fas fa-user"></i> Thông tin cá nhân
+                            </button>
+                            <button class="nav-btn" data-tab="security">
+                                <i class="fas fa-shield-alt"></i> Bảo mật
+                            </button>
+                            <button class="nav-btn" data-tab="notifications">
+                                <i class="fas fa-bell"></i> Thông báo
+                            </button>
+                            <button class="nav-btn" data-tab="activity">
+                                <i class="fas fa-history"></i> Hoạt động gần đây
+                            </button>
+                        </div>
+
+                        <!-- Personal Information -->
+                        <div class="profile-section active" id="info-section">
+                            <div class="section-header">
+                                <h2>Thông tin cá nhân</h2>
+                                <button class="btn-edit" id="editInfo">
+                                    <i class="fas fa-pen"></i> Chỉnh sửa
+                                </button>
+                            </div>
+                            <div class="info-grid">
+                                <div class="info-group">
+                                    <label>Họ và tên</label>
+                                    <input type="text" value="Nguyễn Văn A" disabled>
+                                </div>
+                                <div class="info-group">
+                                    <label>Email</label>
+                                    <input type="email" value="nguyenvana@example.com" disabled>
+                                </div>
+                                <div class="info-group">
+                                    <label>Số điện thoại</label>
+                                    <input type="tel" value="0912345678" disabled>
+                                </div>
+                                <div class="info-group">
+                                    <label>Ngày sinh</label>
+                                    <input type="date" value="1990-01-01" disabled>
+                                </div>
+                                <div class="info-group">
+                                    <label>Giới tính</label>
+                                    <select disabled>
+                                        <option value="male">Nam</option>
+                                        <option value="female">Nữ</option>
+                                        <option value="other">Khác</option>
+                                    </select>
+                                </div>
+                                <div class="info-group">
+                                    <label>Chức vụ</label>
+                                    <input type="text" value="Quản trị viên" disabled>
+                                </div>
+                                <div class="info-group full-width">
+                                    <label>Địa chỉ</label>
+                                    <input type="text" value="123 Đường ABC, Quận XYZ, TP. Hà Nội" disabled>
+                                </div>
+                                <div class="info-group full-width">
+                                    <label>Giới thiệu</label>
+                                    <textarea disabled>Quản trị viên với hơn 5 năm kinh nghiệm trong lĩnh vực quản lý khách sạn.</textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Security Settings -->
+                        <div class="profile-section" id="security-section">
+                            <div class="section-header">
+                                <h2>Bảo mật</h2>
+                            </div>
+                            <div class="security-settings">
+                                <div class="setting-group">
+                                    <h3>Đổi mật khẩu</h3>
+                                    <div class="password-form">
+                                        <div class="form-group">
+                                            <label>Mật khẩu hiện tại</label>
+                                            <input type="password">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Mật khẩu mới</label>
+                                            <input type="password">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Xác nhận mật khẩu mới</label>
+                                            <input type="password">
+                                        </div>
+                                        <button class="btn-primary">Cập nhật mật khẩu</button>
+                                    </div>
+                                </div>
+                                <div class="setting-group">
+                                    <h3>Xác thực hai yếu tố</h3>
+                                    <div class="two-factor">
+                                        <div class="two-factor-status">
+                                            <span class="status-badge enabled">Đã bật</span>
+                                            <button class="btn-outline">Tắt xác thực</button>
+                                        </div>
+                                        <p>Bảo vệ tài khoản của bạn bằng xác thực hai yếu tố.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Notification Settings -->
+                        <div class="profile-section" id="notifications-section">
+                            <div class="section-header">
+                                <h2>Cài đặt thông báo</h2>
+                            </div>
+                            <div class="notification-settings">
+                                <div class="notification-group">
+                                    <h3>Email</h3>
+                                    <div class="notification-option">
+                                        <label class="toggle">
+                                            <input type="checkbox" checked>
+                                            <span class="toggle-slider"></span>
+                                        </label>
+                                        <div class="option-info">
+                                            <h4>Thông báo đặt phòng</h4>
+                                            <p>Nhận email khi có đặt phòng mới</p>
+                                        </div>
+                                    </div>
+                                    <div class="notification-option">
+                                        <label class="toggle">
+                                            <input type="checkbox" checked>
+                                            <span class="toggle-slider"></span>
+                                        </label>
+                                        <div class="option-info">
+                                            <h4>Báo cáo hàng ngày</h4>
+                                            <p>Nhận báo cáo tổng hợp hàng ngày</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="notification-group">
+                                    <h3>Ứng dụng</h3>
+                                    <div class="notification-option">
+                                        <label class="toggle">
+                                            <input type="checkbox" checked>
+                                            <span class="toggle-slider"></span>
+                                        </label>
+                                        <div class="option-info">
+                                            <h4>Thông báo đẩy</h4>
+                                            <p>Nhận thông báo trực tiếp trên ứng dụng</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Recent Activity -->
+                        <div class="profile-section" id="activity-section">
+                            <div class="section-header">
+                                <h2>Hoạt động gần đây</h2>
+                            </div>
+                            <div class="activity-list">
+                                <div class="activity-item">
+                                    <div class="activity-icon">
+                                        <i class="fas fa-user-edit"></i>
+                                    </div>
+                                    <div class="activity-details">
+                                        <p class="activity-text">Cập nhật thông tin cá nhân</p>
+                                        <span class="activity-time">2 giờ trước</span>
+                                    </div>
+                                </div>
+                                <div class="activity-item">
+                                    <div class="activity-icon">
+                                        <i class="fas fa-key"></i>
+                                    </div>
+                                    <div class="activity-details">
+                                        <p class="activity-text">Thay đổi mật khẩu</p>
+                                        <span class="activity-time">1 ngày trước</span>
+                                    </div>
+                                </div>
+                                <div class="activity-item">
+                                    <div class="activity-icon">
+                                        <i class="fas fa-sign-in-alt"></i>
+                                    </div>
+                                    <div class="activity-details">
+                                        <p class="activity-text">Đăng nhập từ thiết bị mới</p>
+                                        <span class="activity-time">3 ngày trước</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../Script/admin-components.js"></script>
+    <script src="../Script/profile.js"></script>
+</body>
+
+</html> 

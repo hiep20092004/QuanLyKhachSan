@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi tiết phòng - Luxury Hotel</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="../Styles/styles.css">
+    <link rel="stylesheet" href="../Styles/room-detail.css">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <div id="header"></div>
+
+    <main>
+        <!-- Gallery Section -->
+        <section class="room-gallery">
+            <div class="swiper gallery-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="../Images/suinen4.webp" alt="Room View 1">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../Images/sui2.jpg" alt="Room View 2">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../Images/sui3.jpg" alt="Room View 3">
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </section>
+
+        <!-- Room Info Section -->
+        <section class="room-info">
+            <div class="container">
+                <div class="room-header">
+                    <div class="room-title">
+                        <h1>Deluxe Room</h1>
+                        <div class="room-meta">
+                            <span><i class="fas fa-ruler-combined"></i> 40m²</span>
+                            <span><i class="fas fa-user-friends"></i> 2 người</span>
+                            <span><i class="fas fa-bed"></i> 1 giường King</span>
+                            <span><i class="fas fa-mountain"></i> View thành phố</span>
+                        </div>
+                    </div>
+                    <div class="room-price">
+                        <div class="price">2,000,000₫<span>/đêm</span></div>
+                        <a href="booking.html" class="btn-book">Đặt phòng ngay</a>
+                    </div>
+                </div>
+
+                <div class="room-content">
+                    <div class="room-description">
+                        <h2>Mô tả</h2>
+                        <p>Phòng Deluxe của chúng tôi mang đến không gian sang trọng và tiện nghi với diện tích 40m². Thiết kế hiện đại pha trộn với nét đẹp truyền thống tạo nên không gian nghỉ dưỡng hoàn hảo. Tầm nhìn panorama ra thành phố sẽ mang đến cho bạn những khoảnh khắc thư giãn tuyệt vời.</p>
+                    </div>
+
+                    <div class="room-amenities">
+                        <h2>Tiện nghi phòng</h2>
+                        <div class="amenities-grid">
+                            <div class="amenity-item">
+                                <i class="fas fa-wifi"></i>
+                                <span>WiFi miễn phí</span>
+                            </div>
+                            <div class="amenity-item">
+                                <i class="fas fa-tv"></i>
+                                <span>TV màn hình phẳng</span>
+                            </div>
+                            <div class="amenity-item">
+                                <i class="fas fa-snowflake"></i>
+                                <span>Điều hòa</span>
+                            </div>
+                            <div class="amenity-item">
+                                <i class="fas fa-coffee"></i>
+                                <span>Mini bar</span>
+                            </div>
+                            <div class="amenity-item">
+                                <i class="fas fa-bath"></i>
+                                <span>Bồn tắm</span>
+                            </div>
+                            <div class="amenity-item">
+                                <i class="fas fa-concierge-bell"></i>
+                                <span>Dịch vụ phòng 24/7</span>
+                            </div>
+                            <div class="amenity-item">
+                                <i class="fas fa-vault"></i>
+                                <span>Két an toàn</span>
+                            </div>
+                            <div class="amenity-item">
+                                <i class="fas fa-shower"></i>
+                                <span>Vòi sen cao cấp</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="room-policies">
+                        <h2>Chính sách phòng</h2>
+                        <div class="policies-grid">
+                            <div class="policy-item">
+                                <h3>Nhận phòng & Trả phòng</h3>
+                                <p><i class="fas fa-clock"></i> Nhận phòng: từ 14:00</p>
+                                <p><i class="fas fa-clock"></i> Trả phòng: trước 12:00</p>
+                            </div>
+                            <div class="policy-item">
+                                <h3>Chính sách hủy</h3>
+                                <p><i class="fas fa-info-circle"></i> Miễn phí hủy phòng trước 3 ngày</p>
+                            </div>
+                            <div class="policy-item">
+                                <h3>Trẻ em & Giường phụ</h3>
+                                <p><i class="fas fa-child"></i> Trẻ em dưới 6 tuổi: miễn phí</p>
+                                <p><i class="fas fa-bed"></i> Giường phụ: 500,000₫/đêm</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Similar Rooms Section -->
+        <section class="similar-rooms">
+            <div class="container">
+                <h2>Phòng tương tự</h2>
+                <div class="rooms-grid">
+                    <div class="room-card">
+                        <img src="../Images/sui2.jpg" alt="Premium Room">
+                        <div class="room-card-content">
+                            <h3>Premium Room</h3>
+                            <p>Phòng cao cấp với view đẹp</p>
+                            <div class="room-card-meta">
+                                <span>45m²</span>
+                                <span>2,500,000₫/đêm</span>
+                            </div>
+                            <a href="#" class="btn-view">Xem chi tiết</a>
+                        </div>
+                    </div>
+                    <div class="room-card">
+                        <img src="../Images/sui3.jpg" alt="Suite Room">
+                        <div class="room-card-content">
+                            <h3>Suite Room</h3>
+                            <p>Phòng suite sang trọng</p>
+                            <div class="room-card-meta">
+                                <span>60m²</span>
+                                <span>3,500,000₫/đêm</span>
+                            </div>
+                            <a href="#" class="btn-view">Xem chi tiết</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <!-- Component loader -->
+    <script src="../Script/include.js"></script>
+    <!-- Main script -->
+    <script src="../Script/script.js"></script>
+    <!-- Room detail script -->
+    <script src="../Script/room-detail.js"></script>
+</body>
+</html> 

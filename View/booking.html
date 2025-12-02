@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đặt Phòng - Luxury Hotel</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="../Styles/styles.css">
+    <link rel="stylesheet" href="../Styles/booking.css">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Date picker -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <div id="header"></div>
+
+    <main>
+        <section class="booking-hero">
+            <div class="hero-content">
+                <h1>ĐẶT PHÒNG</h1>
+                <p>Trải nghiệm kỳ nghỉ tuyệt vời tại khách sạn của chúng tôi</p>
+            </div>
+        </section>
+
+        <section class="booking-section">
+            <div class="container">
+                <div class="booking-container">
+                    <div class="booking-form">
+                        <h2>Thông tin đặt phòng</h2>
+                        <form id="bookingForm">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="checkIn">Ngày nhận phòng</label>
+                                    <div class="input-icon">
+                                        <i class="fas fa-calendar"></i>
+                                        <input type="text" id="checkIn" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="checkOut">Ngày trả phòng</label>
+                                    <div class="input-icon">
+                                        <i class="fas fa-calendar"></i>
+                                        <input type="text" id="checkOut" required>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="adults">Số người lớn</label>
+                                    <div class="input-icon">
+                                        <i class="fas fa-user"></i>
+                                        <input type="number" id="adults" min="1" max="10" value="1" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="children">Số trẻ em</label>
+                                    <div class="input-icon">
+                                        <i class="fas fa-child"></i>
+                                        <input type="number" id="children" min="0" max="5" value="0">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="roomType">Loại phòng</label>
+                                <div class="input-icon">
+                                    <i class="fas fa-bed"></i>
+                                    <select id="roomType" required>
+                                        <option value="">Chọn loại phòng</option>
+                                        <option value="deluxe">Deluxe Room</option>
+                                        <option value="premium">Deluxe Premium</option>
+                                        <option value="suite">Suite Room</option>
+                                        <option value="executive">Executive Suite</option>
+                                        <option value="presidential">Presidential Suite</option>
+                                        <option value="family">Family Room</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="name">Họ và tên</label>
+                                <div class="input-icon">
+                                    <i class="fas fa-user"></i>
+                                    <input type="text" id="name" required>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <div class="input-icon">
+                                        <i class="fas fa-envelope"></i>
+                                        <input type="email" id="email" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Số điện thoại</label>
+                                    <div class="input-icon">
+                                        <i class="fas fa-phone"></i>
+                                        <input type="tel" id="phone" required>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="specialRequests">Yêu cầu đặc biệt</label>
+                                <textarea id="specialRequests" rows="4"></textarea>
+                            </div>
+
+                            <button type="submit" class="btn-book">Đặt phòng ngay</button>
+                        </form>
+                    </div>
+
+                    <div class="booking-summary">
+                        <h3>Tóm tắt đặt phòng</h3>
+                        <div class="summary-content">
+                            <div class="summary-item">
+                                <span>Nhận phòng:</span>
+                                <span id="summaryCheckIn">--/--/----</span>
+                            </div>
+                            <div class="summary-item">
+                                <span>Trả phòng:</span>
+                                <span id="summaryCheckOut">--/--/----</span>
+                            </div>
+                            <div class="summary-item">
+                                <span>Số đêm:</span>
+                                <span id="summaryNights">0</span>
+                            </div>
+                            <div class="summary-item">
+                                <span>Loại phòng:</span>
+                                <span id="summaryRoomType">Chưa chọn</span>
+                            </div>
+                            <div class="summary-item">
+                                <span>Số người:</span>
+                                <span id="summaryGuests">0 người lớn, 0 trẻ em</span>
+                            </div>
+                            <div class="price-summary">
+                                <div class="summary-item">
+                                    <span>Giá phòng mỗi đêm:</span>
+                                    <span id="summaryPricePerNight">0 VND</span>
+                                </div>
+                                <div class="summary-item total">
+                                    <span>Tổng tiền:</span>
+                                    <span id="summaryTotal">0 VND</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/vn.js"></script>
+    <!-- Component loader -->
+    <script src="../Script/include.js"></script>
+    <!-- Main script -->
+    <script src="../Script/script.js"></script>
+    <!-- Booking script -->
+    <script src="../Script/booking.js"></script>
+</body>
+</html> 

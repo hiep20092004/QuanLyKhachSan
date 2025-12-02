@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đặt Bàn - La Brasserie Restaurant</title>
+    <!-- Thư viện Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- File CSS -->
+    <link rel="stylesheet" href="../Styles/styles.css">
+    <link rel="stylesheet" href="../Styles/restaurant-booking.css">
+    <link rel="stylesheet" href="../Styles/header.css">
+    <!-- Thư viện jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <!-- Phần header sẽ được tải vào đây -->
+    <div id="header"></div>
+
+    <div class="booking-container">
+        <!-- Tiêu đề trang -->
+        <div class="booking-header">
+            <h1>Đặt Bàn Tại La Brasserie</h1>
+            <p>Trải nghiệm ẩm thực đẳng cấp tại nhà hàng của chúng tôi</p>
+        </div>
+
+        <div class="booking-content">
+            <!-- Form đặt bàn -->
+            <div class="booking-form-container">
+                <form id="bookingForm" class="booking-form">
+                    <div class="form-group">
+                        <label for="date">Ngày đặt bàn</label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="time">Giờ đặt bàn</label>
+                        <select id="time" name="time" required>
+                            <option value="">Chọn giờ</option>
+                            <option value="11:30">11:30</option>
+                            <option value="12:00">12:00</option>
+                            <option value="12:30">12:30</option>
+                            <option value="13:00">13:00</option>
+                            <option value="18:00">18:00</option>
+                            <option value="18:30">18:30</option>
+                            <option value="19:00">19:00</option>
+                            <option value="19:30">19:30</option>
+                            <option value="20:00">20:00</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="guests">Số lượng khách</label>
+                        <select id="guests" name="guests" required>
+                            <option value="">Chọn số lượng</option>
+                            <option value="1">1 người</option>
+                            <option value="2">2 người</option>
+                            <option value="3">3 người</option>
+                            <option value="4">4 người</option>
+                            <option value="5">5 người</option>
+                            <option value="6">6 người</option>
+                            <option value="7">7 người</option>
+                            <option value="8">8 người</option>
+                            <option value="more">Hơn 8 người</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="area">Khu vực</label>
+                        <select id="area" name="area" required>
+                            <option value="">Chọn khu vực</option>
+                            <option value="indoor">Trong nhà</option>
+                            <option value="outdoor">Ngoài trời</option>
+                            <option value="private">Phòng riêng</option>
+                            <option value="bar">Khu vực Bar</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="occasion">Dịp đặc biệt</label>
+                        <select id="occasion" name="occasion">
+                            <option value="">Chọn dịp (nếu có)</option>
+                            <option value="birthday">Sinh nhật</option>
+                            <option value="anniversary">Kỷ niệm</option>
+                            <option value="business">Công việc</option>
+                            <option value="other">Khác</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="name">Họ và tên</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">Số điện thoại</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="notes">Ghi chú đặc biệt</label>
+                        <textarea id="notes" name="notes" rows="3" placeholder="Yêu cầu đặc biệt về món ăn, chỗ ngồi..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-book">Đặt Bàn</button>
+                </form>
+            </div>
+
+            <!-- Thông tin bổ sung -->
+            <div class="booking-info">
+                <div class="info-card">
+                    <h3><i class="fas fa-clock"></i> Giờ Mở Cửa</h3>
+                    <ul>
+                        <li>Thứ 2 - Thứ 6: 11:30 - 14:30 | 18:00 - 22:00</li>
+                        <li>Thứ 7 - Chủ nhật: 11:30 - 22:00</li>
+                    </ul>
+                </div>
+
+                <div class="info-card">
+                    <h3><i class="fas fa-utensils"></i> Thông Tin Nhà Hàng</h3>
+                    <ul>
+                        <li>Ẩm thực Pháp đương đại</li>
+                        <li>View panorama thành phố</li>
+                        <li>Phục vụ rượu vang cao cấp</li>
+                        <li>Có phòng VIP riêng tư</li>
+                    </ul>
+                </div>
+
+                <div class="info-card">
+                    <h3><i class="fas fa-phone"></i> Liên Hệ</h3>
+                    <ul>
+                        <li>Điện thoại: (+84) 28 1234 5678</li>
+                        <li>Email: dining@hotelnikko.com</li>
+                        <li>Tầng 23, Hotel Nikko Saigon</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Phần footer sẽ được tải vào đây -->
+    <div id="footer"></div>
+
+    <!-- Các thư viện JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Tải các thành phần -->
+    <script src="../Script/include.js"></script>
+    <!-- Script chính -->
+    <script src="../Script/script.js"></script>
+    <!-- Script xử lý đặt bàn -->
+    <script src="../Script/restaurant-booking.js"></script>
+</body>
+
+</html> 

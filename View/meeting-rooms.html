@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phòng Họp - Luxury Hotel</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="../Styles/styles.css">
+    <link rel="stylesheet" href="../Styles/meeting-rooms.css">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <div id="header"></div>
+
+    <main>
+        <!-- Hero Section -->
+        <div class="hero" style="background-image: url('../Images/suinen4.webp');">
+            <div class="hero-content"  data-aos="fade-up">
+                <h1>Phòng Họp Đẳng Cấp</h1>
+                <p>Không gian chuyên nghiệp cho mọi sự kiện quan trọng</p>
+            </div>
+        </div>
+
+        <!-- Overview Section -->
+        <section class="overview">
+            <div class="container">
+                <div class="overview-content">
+                    <div class="overview-text" data-aos="fade-right">
+                        <h2>Tổng Quan</h2>
+                        <p>Khách sạn chúng tôi tự hào cung cấp các phòng họp hiện đại với trang thiết bị tối tân, phù hợp cho mọi nhu cầu từ cuộc họp nhỏ đến hội nghị lớn. Với đội ngũ nhân viên chuyên nghiệp, chúng tôi cam kết mang đến trải nghiệm hoàn hảo cho sự kiện của bạn.</p>
+                        <div class="features">
+                            <div class="feature">
+                                <i class="fas fa-wifi"></i>
+                                <span>WiFi tốc độ cao</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-video"></i>
+                                <span>Thiết bị hội nghị trực tuyến</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-coffee"></i>
+                                <span>Dịch vụ ăn uống</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="overview-image" data-aos="fade-left">
+                        <img src="../Images/mingcourt.jpg" alt="Meeting Room Overview">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Room Types -->
+        <section class="room-types">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">Các Loại Phòng Họp</h2>
+                <div class="room-grid">
+                    <!-- Boardroom -->
+                    <div class="room-card" data-aos="fade-up">
+                        <div class="room-image">
+                            <img src="../Images/mingcourt1.jpg" alt="Boardroom">
+                        </div>
+                        <div class="room-content">
+                            <h3>Phòng Họp Ban Giám Đốc</h3>
+                            <ul class="room-features">
+                                <li><i class="fas fa-users"></i> Sức chứa: 12 người</li>
+                                <li><i class="fas fa-vector-square"></i> Diện tích: 40m²</li>
+                                <li><i class="fas fa-tv"></i> Màn hình LED 75"</li>
+                            </ul>
+                            <p class="price">5,000,000₫ / ngày</p>
+                            <a href="../View/event-booking.html" class="btn-book">Đặt phòng</a>
+                        </div>
+                    </div>
+
+                    <!-- Conference Room -->
+                    <div class="room-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="room-image">
+                            <img src="../Images/mingcourt2.jpg" alt="Conference Room">
+                        </div>
+                        <div class="room-content">
+                            <h3>Phòng Hội Nghị</h3>
+                            <ul class="room-features">
+                                <li><i class="fas fa-users"></i> Sức chứa: 50 người</li>
+                                <li><i class="fas fa-vector-square"></i> Diện tích: 100m²</li>
+                                <li><i class="fas fa-projector"></i> Máy chiếu 4K</li>
+                            </ul>
+                            <p class="price">15,000,000₫ / ngày</p>
+                            <a href="../View/event-booking.html" class="btn-book">Đặt phòng</a>
+                        </div>
+                    </div>
+
+                    <!-- Meeting Room -->
+                    <div class="room-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="room-image">
+                            <img src="../Images/thelounge.jpg" alt="Meeting Room">
+                        </div>
+                        <div class="room-content">
+                            <h3>Phòng Họp Nhỏ</h3>
+                            <ul class="room-features">
+                                <li><i class="fas fa-users"></i> Sức chứa: 8 người</li>
+                                <li><i class="fas fa-vector-square"></i> Diện tích: 25m²</li>
+                                <li><i class="fas fa-tv"></i> Màn hình LED 65"</li>
+                            </ul>
+                            <p class="price">3,000,000₫ / ngày</p>
+                            <a href="../View/event-booking.html" class="btn-book">Đặt phòng</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Facilities -->
+        <section class="facilities">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">Tiện Nghi & Dịch Vụ</h2>
+                <div class="facilities-grid">
+                    <div class="facility" data-aos="fade-up">
+                        <i class="fas fa-microphone"></i>
+                        <h3>Âm thanh chuyên nghiệp</h3>
+                        <p>Hệ thống âm thanh cao cấp với micro không dây</p>
+                    </div>
+                    <div class="facility" data-aos="fade-up" data-aos-delay="100">
+                        <i class="fas fa-network-wired"></i>
+                        <h3>Kết nối</h3>
+                        <p>Cổng kết nối đa dạng, WiFi tốc độ cao</p>
+                    </div>
+                    <div class="facility" data-aos="fade-up" data-aos-delay="200">
+                        <i class="fas fa-lightbulb"></i>
+                        <h3>Ánh sáng</h3>
+                        <p>Hệ thống chiếu sáng thông minh, có thể điều chỉnh</p>
+                    </div>
+                    <div class="facility" data-aos="fade-up" data-aos-delay="300">
+                        <i class="fas fa-temperature-low"></i>
+                        <h3>Điều hòa</h3>
+                        <p>Hệ thống điều hòa trung tâm hiện đại</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Booking Section -->
+        <section class="booking">
+            <div class="container">
+                <div class="booking-content">
+                    <div class="booking-text" data-aos="fade-right">
+                        <h2>Đặt Phòng Họp</h2>
+                        <p>Để được tư vấn và đặt phòng, vui lòng liên hệ với chúng tôi:</p>
+                        <div class="contact-info">
+                            <p><i class="fas fa-phone"></i> +84 123 456 789</p>
+                            <p><i class="fas fa-envelope"></i> meetings@luxuryhotel.com</p>
+                        </div>
+                        <a href="#" class="btn-contact">Liên hệ ngay</a>
+                    </div>
+                    <div class="booking-image" data-aos="fade-left">
+                        <img src="../Images/thelounge1.jpg" alt="Meeting Room Booking">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Component loader -->
+    <script src="../Script/include.js"></script>
+    <!-- Main script -->
+    <script src="../Script/script.js"></script>
+    <!-- Meeting rooms script -->
+    <script src="../Script/meeting-rooms.js"></script>
+</body>
+</html> 

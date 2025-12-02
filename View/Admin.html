@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Hotel Nikko Saigon</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../Styles/admin.css">
+</head>
+
+<body>
+    <div class="admin-container">
+        <!-- Sidebar -->
+        <div id="admin-sidebar"></div>
+
+        <div class="main-content">
+            <!-- Admin Header -->
+            <div id="admin-header"></div>
+
+            <!-- Dashboard Content -->
+            <div class="dashboard">
+                <h1>Tổng quan</h1>
+
+                <!-- Stats Cards -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background-color: #4CAF50;">
+                            <i class="fas fa-bed"></i>
+                        </div>
+                        <div class="stat-details">
+                            <h3>Phòng đã đặt</h3>
+                            <p class="stat-number">42/50</p>
+                            <p class="stat-percent positive">+12% so với tuần trước</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background-color: #2196F3;">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="stat-details">
+                            <h3>Khách đang lưu trú</h3>
+                            <p class="stat-number">86</p>
+                            <p class="stat-percent positive">+5% so với tuần trước</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background-color: #FF9800;">
+                            <i class="fas fa-money-bill-wave"></i>
+                        </div>
+                        <div class="stat-details">
+                            <h3>Doanh thu hôm nay</h3>
+                            <p class="stat-number">32.5M VND</p>
+                            <p class="stat-percent positive">+8% so với hôm qua</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background-color: #9C27B0;">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                        <div class="stat-details">
+                            <h3>Đặt phòng mới</h3>
+                            <p class="stat-number">12</p>
+                            <p class="stat-percent negative">-3% so với hôm qua</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Bookings -->
+                <div class="recent-bookings">
+                    <div class="section-header">
+                        <h2>Đặt phòng gần đây</h2>
+                        <a href="#" class="view-all">Xem tất cả</a>
+                    </div>
+                    <div class="table-responsive">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Khách hàng</th>
+                                    <th>Phòng</th>
+                                    <th>Ngày nhận</th>
+                                    <th>Ngày trả</th>
+                                    <th>Trạng thái</th>
+                                    <th>Thao tác</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>#12345</td>
+                                    <td>Nguyễn Văn A</td>
+                                    <td>301 - Deluxe</td>
+                                    <td>20/03/2024</td>
+                                    <td>25/03/2024</td>
+                                    <td><span class="status confirmed">Đã xác nhận</span></td>
+                                    <td>
+                                        <button class="btn-icon"><i class="fas fa-edit"></i></button>
+                                        <button class="btn-icon"><i class="fas fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>#12346</td>
+                                    <td>Trần Thị B</td>
+                                    <td>405 - Suite</td>
+                                    <td>21/03/2024</td>
+                                    <td>23/03/2024</td>
+                                    <td><span class="status pending">Chờ xác nhận</span></td>
+                                    <td>
+                                        <button class="btn-icon"><i class="fas fa-edit"></i></button>
+                                        <button class="btn-icon"><i class="fas fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>#12347</td>
+                                    <td>Lê Văn C</td>
+                                    <td>202 - Standard</td>
+                                    <td>22/03/2024</td>
+                                    <td>24/03/2024</td>
+                                    <td><span class="status cancelled">Đã hủy</span></td>
+                                    <td>
+                                        <button class="btn-icon"><i class="fas fa-edit"></i></button>
+                                        <button class="btn-icon"><i class="fas fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Room Status -->
+                <div class="room-status">
+                    <div class="section-header">
+                        <h2>Trạng thái phòng</h2>
+                        <a href="#" class="view-all">Xem tất cả</a>
+                    </div>
+                    <div class="room-grid">
+                        <div class="room-card occupied">
+                            <h3>301</h3>
+                            <p>Deluxe</p>
+                            <span class="status">Đang sử dụng</span>
+                        </div>
+                        <div class="room-card available">
+                            <h3>302</h3>
+                            <p>Deluxe</p>
+                            <span class="status">Trống</span>
+                        </div>
+                        <div class="room-card cleaning">
+                            <h3>303</h3>
+                            <p>Suite</p>
+                            <span class="status">Đang dọn</span>
+                        </div>
+                        <div class="room-card maintenance">
+                            <h3>304</h3>
+                            <p>Standard</p>
+                            <span class="status">Bảo trì</span>
+                        </div>
+                        <div class="room-card reserved">
+                            <h3>305</h3>
+                            <p>Deluxe</p>
+                            <span class="status">Đã đặt</span>
+                        </div>
+                        <div class="room-card available">
+                            <h3>306</h3>
+                            <p>Suite</p>
+                            <span class="status">Trống</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </main>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script src="../Script/admin-components.js"></script>
+        <script src="../Script/admin.js"></script>
+</body>
+
+</html>

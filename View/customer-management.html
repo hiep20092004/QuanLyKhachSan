@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản Lý Khách Hàng - Hotel Nikko Saigon</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Styles/admin.css">
+    <link rel="stylesheet" href="../Styles/customer-management.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <div class="admin-container">
+        <!-- Admin Sidebar -->
+        <div id="admin-sidebar"></div>
+
+        <div class="main-content">
+            <!-- Admin Header -->
+            <div id="admin-header"></div>
+
+            <!-- Main Content -->
+            <div class="content-wrapper">
+                <div class="page-header">
+                    <h1 style="margin-bottom: 20px;">Quản Lý Khách Hàng</h1>
+                    <button class="btn btn-primary">
+                        <i class="fas fa-plus"></i> Thêm Khách Hàng
+                    </button>
+                </div>
+
+                <div class="customer-stats">
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background-color: #4CAF50;">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Tổng Khách Hàng</h3>
+                            <p class="stat-number">1,234</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background-color: #2196F3;">
+                            <i class="fas fa-bed"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Đang Lưu Trú</h3>
+                            <p class="stat-number">45</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background-color: #FF9800;">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Đặt Phòng Hôm Nay</h3>
+                            <p class="stat-number">12</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background-color: #9C27B0;">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Khách VIP</h3>
+                            <p class="stat-number">156</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="filter-section">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Tìm kiếm khách hàng...">
+                    </div>
+                    <div class="filter-group">
+                        <select class="form-control">
+                            <option value="">Loại Khách Hàng</option>
+                            <option value="regular">Thường</option>
+                            <option value="vip">VIP</option>
+                            <option value="business">Doanh Nghiệp</option>
+                        </select>
+                        <select class="form-control">
+                            <option value="">Trạng Thái</option>
+                            <option value="staying">Đang Lưu Trú</option>
+                            <option value="booked">Đã Đặt Phòng</option>
+                            <option value="checked-out">Đã Trả Phòng</option>
+                        </select>
+                        <button class="btn btn-filter">
+                            <i class="fas fa-filter"></i> Lọc
+                        </button>
+                    </div>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <input type="checkbox" class="select-all">
+                                </th>
+                                <th>Mã KH</th>
+                                <th>Họ Tên</th>
+                                <th>Số Điện Thoại</th>
+                                <th>Email</th>
+                                <th>Loại KH</th>
+                                <th>Trạng Thái</th>
+                                <th>Phòng</th>
+                                <th>Check-in</th>
+                                <th>Check-out</th>
+                                <th>Thao Tác</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><input type="checkbox" class="select-item"></td>
+                                <td>KH001</td>
+                                <td>
+                                    <div class="customer-info">
+                                        <img src="../Images/avatar1.jpg" alt="Nguyễn Văn A">
+                                        <div>
+                                            <span class="customer-name">Nguyễn Văn A</span>
+                                            <span class="customer-id">CCCD: 012345678901</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>0912345678</td>
+                                <td>nguyenvana@email.com</td>
+                                <td><span class="badge vip">VIP</span></td>
+                                <td><span class="badge staying">Đang lưu trú</span></td>
+                                <td>301</td>
+                                <td>20/03/2024</td>
+                                <td>25/03/2024</td>
+                                <td>
+                                    <div class="action-buttons">
+                                        <button class="btn-icon" title="Chi tiết">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                        <button class="btn-icon" title="Chỉnh sửa">
+                                            <i class="fas fa-edit"></i>
+                                        </button>
+                                        <button class="btn-icon" title="Xóa">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="select-item"></td>
+                                <td>KH002</td>
+                                <td>
+                                    <div class="customer-info">
+                                        <img src="../Images/avatar2.jpg" alt="Trần Thị B">
+                                        <div>
+                                            <span class="customer-name">Trần Thị B</span>
+                                            <span class="customer-id">CCCD: 098765432109</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>0987654321</td>
+                                <td>tranthib@email.com</td>
+                                <td><span class="badge regular">Thường</span></td>
+                                <td><span class="badge booked">Đã đặt phòng</span></td>
+                                <td>205</td>
+                                <td>25/03/2024</td>
+                                <td>27/03/2024</td>
+                                <td>
+                                    <div class="action-buttons">
+                                        <button class="btn-icon" title="Chi tiết">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                        <button class="btn-icon" title="Chỉnh sửa">
+                                            <i class="fas fa-edit"></i>
+                                        </button>
+                                        <button class="btn-icon" title="Xóa">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="select-item"></td>
+                                <td>KH003</td>
+                                <td>
+                                    <div class="customer-info">
+                                        <img src="../Images/avatar3.jpg" alt="Lê Văn C">
+                                        <div>
+                                            <span class="customer-name">Lê Văn C</span>
+                                            <span class="customer-id">CCCD: 123456789012</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>0923456789</td>
+                                <td>levanc@email.com</td>
+                                <td><span class="badge business">Doanh nghiệp</span></td>
+                                <td><span class="badge checked-out">Đã trả phòng</span></td>
+                                <td>401</td>
+                                <td>15/03/2024</td>
+                                <td>20/03/2024</td>
+                                <td>
+                                    <div class="action-buttons">
+                                        <button class="btn-icon" title="Chi tiết">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                        <button class="btn-icon" title="Chỉnh sửa">
+                                            <i class="fas fa-edit"></i>
+                                        </button>
+                                        <button class="btn-icon" title="Xóa">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="table-footer">
+                    <div class="bulk-actions">
+                        <select class="form-control">
+                            <option value="">Thao tác hàng loạt</option>
+                            <option value="export">Xuất Excel</option>
+                            <option value="email">Gửi Email</option>
+                            <option value="delete">Xóa</option>
+                        </select>
+                        <button class="btn btn-secondary">Áp dụng</button>
+                    </div>
+                    <div class="pagination">
+                        <span class="pagination-info">Hiển thị 1-10 của 100 khách hàng</span>
+                        <div class="pagination-buttons">
+                            <button class="btn-page"><i class="fas fa-chevron-left"></i></button>
+                            <button class="btn-page active">1</button>
+                            <button class="btn-page">2</button>
+                            <button class="btn-page">3</button>
+                            <button class="btn-page">...</button>
+                            <button class="btn-page">10</button>
+                            <button class="btn-page"><i class="fas fa-chevron-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../Script/admin-components.js"></script>
+    <script src="../Script/admin.js"></script>
+    <script src="../Script/customer-management.js"></script>
+</body>
+
+</html> 
