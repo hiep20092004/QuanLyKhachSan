@@ -1,6 +1,6 @@
 $(document).ready(function() {
     // Load admin header
-    $("#admin-header").load("../components/admin-header.html", function() {
+    $("#admin-header").load("../View/admin-header.html", function() {
         // Xử lý menu profile
         $('.admin-profile').click(function(e) {
             e.stopPropagation();
@@ -55,7 +55,7 @@ $(document).ready(function() {
     });
     
     // Load admin sidebar
-    $("#admin-sidebar").load("../components/admin-sidebar.html", function() {
+    $("#admin-sidebar").load("../View/admin-sidebar.html", function() {
         // Xử lý active menu item
         $('.sidebar-nav a').click(function(e) {
             e.preventDefault();

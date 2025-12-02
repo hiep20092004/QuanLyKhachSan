@@ -156,6 +156,6 @@ function updateLoginDisplay() {
 
 // Tải components khi trang được tải
 document.addEventListener('DOMContentLoaded', () => {
-    loadComponent('../View/components/header.html', 'header');
-    loadComponent('../View/components/footer.html', 'footer');
+    loadComponent('../View/header.html', 'header');
+    loadComponent('../View/footer.html', 'footer');
 }); 

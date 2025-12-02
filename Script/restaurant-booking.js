@@ -1,7 +1,7 @@
 $(document).ready(function() {
     // Tải header và footer
-    $("#header").load("../View/components/header.html");
-    $("#footer").load("../View/components/footer.html");
+    $("#header").load("../View/header.html");
+    $("#footer").load("../View/footer.html");
 
     // Thiết lập ngày tối thiểu là ngày hiện tại
     const today = new Date().toISOString().split('T')[0];

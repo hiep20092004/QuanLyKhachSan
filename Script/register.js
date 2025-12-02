@@ -1,7 +1,7 @@
 $(document).ready(function() {
     // Tải header và footer
-    $("#header").load("../View/components/header.html");
-    $("#footer").load("../View/components/footer.html");
+    $("#header").load("../View/header.html");
+    $("#footer").load("../View/footer.html");
 
     // Xử lý hiện/ẩn mật khẩu
     $('.toggle-password').click(function() {

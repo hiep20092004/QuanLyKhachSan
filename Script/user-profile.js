@@ -1,7 +1,7 @@
 $(document).ready(function () {
     // Tải header và footer
-    $("#header").load("../View/components/header.html");
-    $("#footer").load("../View/components/footer.html");
+    $("#header").load("../View/header.html");
+    $("#footer").load("../View/footer.html");
 
     // Lấy dữ liệu người dùng từ bộ nhớ
     const userData = JSON.parse(localStorage.getItem('userData') || sessionStorage.getItem('userData') || '{}');
